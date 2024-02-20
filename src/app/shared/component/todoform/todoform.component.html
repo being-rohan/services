@@ -1,0 +1,14 @@
+<div class="card mt-4">
+    <div class="card-body">
+        <form [formGroup]="todoForm" (ngSubmit)="onsubmit()">
+            <div class="form-group">
+                <label for="todoitem">Todo item</label>
+                <input type="text" class="form-control"   formControlName="todoItem"   id="todoLtem">
+            </div>
+            <div class="text-right">
+                <button class="btn btn-primary">addtodo</button>
+            </div>
+
+        </form>
+    </div>
+</div>

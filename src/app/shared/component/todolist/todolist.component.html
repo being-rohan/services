@@ -1,0 +1,22 @@
+<!-- <ul class="list-group mt-4">
+    <li class="list-group-item" *ngFor="let todos of todo">
+        {{todos.todoItem}}
+        <span class="float-right"><button class="btn btn-primary mr-3">edit</button>
+            <button class="btn btn-danger">delete</button></span>
+
+
+    </li>
+</ul> -->
+
+
+
+<ul class="list-group">
+    <li class="list-group-item " *ngFor="let todo of todos">
+        {{todo.todoItem}}
+        <span class="float-right">
+            <button class="btn btn-info mr-3">Edit</button>
+            <button class="btn btn-danger" (click)="ondelete(todo.id)">Delete</button>
+
+        </span>
+    </li>
+</ul>

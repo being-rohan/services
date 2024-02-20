@@ -1,0 +1,30 @@
+<!-- <p>
+    {{stdArr | json}}
+</p> -->
+
+<table class="table table-bordered" *ngIf="stdarry.length > 0">
+    <thead>
+        <tr>
+            <th>sr.No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>button</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of stdarry; let i= index">
+            <td>{{i+1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td><button class="btn btn-danger"(click)="ondelete(std.id)">Delete</button></td>
+        </tr>
+    </tbody>
+
+</table>
+ <p class="alert alert-warning" *ngIf="stdarry.length == 0">
+    No Student is added yet !!!
+    </p>
